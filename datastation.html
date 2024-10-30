@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;background-color: rgb(255, 225, 127);margin-right: 100px;">
+    <div style="border: 10px solid transparent;background-color: darkred;width: 550px;border-radius: 15px;text-align: center;">
+    <div style="border: 10px solid transparent;background-color: darkred;color: white;width: 500px;font-size: 30px;font-style: oblique;">
+        <h3>Welcome Back</h3>
+        <p>Adekunle Glory Olamide</p><br>
+    </div><br>
+    <br>
+    <input type="password" placeholder="Password" style="padding: 15px;border-radius: 10px;border-color: red;font-weight: bold;border: 1px solid;width: 470px;" id="password"><br><br>
+    <button style="border: 15px solid transparent;background-color: black;color: white;width: 500px;text-align: center;border-radius: 10px;font-size: larger;" id="sign">Sign In</button>
+    <footer style="color: white;text-align: center;">
+        <p>Forgot your Password or this is not you ?</p>
+        <p style="font-size: larger;">SignOut</p>
+        <p>&copy; 2023</p>
+        &cirE;;
+    </footer>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('sign').addEventListener('click', function(event){
+        event.preventDefault();
+        var password = document.getElementById('password').value;
+        if (!password){
+            alert('INPUT YOUR PASSWORD');return;
+        }
+        else{alert('SIGN-IN SUCESSFULL');return;}
+    }
+
+    )
+</script>

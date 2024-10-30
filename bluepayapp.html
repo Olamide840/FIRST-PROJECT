@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 style="color: darkorange;text-decoration: underline;font-size: larger;text-align: right;">Need Help?</h4><br>
+    <div style="border: 5px solid;background-color: indianred;">
+    <header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 style="color: darkslateblue;font-size: 40px;">BLUE PAY</h2>
+        <p style="margin-top: -20px;">login or create an account to continue</p><br>
+        <br>
+        <input type="email" id="email" style="padding: 17px;border-radius: 12px;border: 1px solid;opacity: 1;font-weight: bolder;transition: opacity 0.3s ease-in-out;width: 400px;" placeholder="Enter Email" required><br>
+        <br>
+        <input type="password" id="password" style="padding: 17px;border-radius: 12px;border: 1px solid;opacity: 1;font-weight: bolder;transition: opacity 0.3s ease-in-out;width: 400px;" placeholder="Enter Password" required><br>
+        <br>
+        <button id="login" style="border: 10px solid transparent;background-color: black;border-radius: 10px;text-align: center;color: white;width: 440px;padding: 10px;">Login</button>
+    </header>
+    <footer>
+        <p style="text-align: center;color: blue ;">Forgot Password?</p>
+    </footer>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('login').addEventListener('click', function(event){
+        event.preventDefault();
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if(!email || !password){alert('Please Fill In All Required Fields');return;}
+        else{alert('Login Successful');return;}
+    }
+
+)
+</script>

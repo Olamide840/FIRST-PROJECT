@@ -1,0 +1,45 @@
+<header style="text-align: center;font-size: 25px;border: 10px solid transparent;background-color: gray;color: white;">
+    Create Account
+</header> 
+<body style="text-align: center;">
+     <p style="margin-top: 5px;">Let's get you set up on Cubbes!</p>
+     <form action="cubes.php" method="post">
+        <p>First Name</p>
+        <input type="text" id="firstName" style="padding: 15px;border-radius: 8px;border: 1px solid black;width: 330px;">
+        <p>Last Name</p>
+        <input type="text" id="lastName" style="width: 330px;padding: 15px;border-radius: 8px;border: 1px solid black;">
+        <p>Email Address</p><br>
+        <input type="email" style="padding: 15px;border-radius: 8px;width: 330px;border: 1px solid black;" id="email">
+        <p>Username</p><br>
+        <input type="text" style="padding: 15px;border-radius: 8px;border: 1px solid black;width: 330px;" id="username">
+        <p>Phone Number</p><br>
+        <input type="tel" style="padding: 15px;border-radius: 8px;width: 330px;border: 1px solid black;" id="phone">
+        <p>Password</p><br>   
+        <input type="password" style="padding: 15px;border-radius: 8px;width: 330px;border: 1px solid black;" id="password"><br>
+        </form>
+        <input type="checkbox" id="show-password"><label for="Show Password">Show Password</label><br>
+        <button style="border: 10px solid transparent;background-color: dodgerblue;text-align: center;border-radius: 8px;padding: 5px;width: 330px;margin-top: 30px;color: white;" id="continue">Continue</button>
+</body>
+<footer style="color: green;text-align: right;font-size: 30px;">
+    Chat with us on WhatsApp
+</footer>
+<script>
+    document.getElementById('show-password').addEventListener('change', function(event) { var passwordField = document.getElementById('password'); if (this.checked) {passwordField.type = 'text';} else {passwordField.type = 'password';}});
+document.getElementById('continue').addEventListener('click', function(event) {event.preventDefault(); 
+var firstName = document.getElementById('firstName').value;
+var lastName = document.getElementById('lastName').value;
+var email = document.getElementById('email').value;
+var username = document.getElementById('username').value;
+var phone = document.getElementById('phone').value;
+var password = document.getElementById('password').value;
+
+if (!firstName || !email || !password || !lastName || !phone || !username) {alert('Please fill in all required field');return;}
+if (!/^\d{3}\d{3}\d{5}$/.test(phone)) { alert('Invalid mobile number format(XXXXXXXX)');return;}
+if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {alert('Invalid email format');return;}
+if (password.length < 8 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) { alert('Password must be at least 8 characters, contain at least one lowercase letter, one uppercase letter, and one number!');return;} 
+alert('Registration successful!');
+window.location.href = 'homepage.html';
+event.preventDefault();
+});
+
+</script>
